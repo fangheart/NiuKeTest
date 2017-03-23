@@ -1,7 +1,5 @@
 package SixFive.NumOfOne11;
 
-import java.util.Vector;
-
 /**
  * Created by FangHeart on 2017/3/19.
  */
@@ -21,7 +19,6 @@ public class Solution {
             return 0;
         else {
             while (n != 0) {
-                n = n - 1;
                 n = n & (n-1);
                 count++;
             }
