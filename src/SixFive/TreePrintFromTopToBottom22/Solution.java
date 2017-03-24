@@ -1,7 +1,5 @@
 package SixFive.TreePrintFromTopToBottom22;
 
-import sun.reflect.generics.tree.Tree;
-
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -44,42 +42,41 @@ public class Solution {
     public ArrayList<Integer> PrintFromTopToBottom(TreeNode root) {
         Queue<TreeNode> queue = new LinkedList<TreeNode>();
         ArrayList<Integer> arrayList = new ArrayList<>();
-        if (root==null)
+        if (root == null)
             return arrayList;
         queue.add(root);
 
-        while(!queue.isEmpty()){
+        while (!queue.isEmpty()) {
             TreeNode treeNode = queue.poll();
             arrayList.add(treeNode.val);
-            if (root.left!=null)
+            if (root.left != null)
                 queue.add(root.left);
-            if (root.right!=null)
-            queue.add(root.right);
+            if (root.right != null)
+                queue.add(root.right);
 
         }
         return arrayList;
-
+    }
 /*
     用ArrayList来模拟队列
      */
-
-    public ArrayList<Integer> PrintFromTopToBottom2(TreeNode root){
-        ArrayList<Integer> list = new ArrayList<>();
-        ArrayList<TreeNode> queue = new ArrayList<TreeNode>();
-        if (root == null) {
-            return list;
-        }
-            queue.add(root);
-            while (queue.size() != 0) {
-                TreeNode temp = queue.remove(0);
-                list.add(temp.val);
-                if (temp.left != null){
-                    queue.add(temp.left);
-                }
-                if (temp.right != null) {
-                    queue.add(temp.right);
-                }
-            }
-            return list;
+public ArrayList<Integer> PrintFromTopToBottom2(TreeNode root){
+    ArrayList<Integer> list = new ArrayList<>();
+    ArrayList<TreeNode> queue = new ArrayList<TreeNode>();
+    if (root == null) {
+        return list;
     }
+    queue.add(root);
+    while (queue.size() != 0) {
+        TreeNode temp = queue.remove(0);
+        list.add(temp.val);
+        if (temp.left != null){
+            queue.add(temp.left);
+        }
+        if (temp.right != null) {
+            queue.add(temp.right);
+        }
+    }
+    return list;
+}
 }
