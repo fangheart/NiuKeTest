@@ -1,10 +1,10 @@
-package SixFive.NK61;
+package SixFive.NK61SerializeAndDeserialize;
 
 /**
  * Created by FangHeart on 2017/3/19.
  */
 /*
-
+请实现两个函数，分别用来序列化和反序列化二叉树
  */
 class TreeNode {
     int val = 0;
@@ -34,5 +34,11 @@ public class Solution {
     /*
 
      */
+    String Serialize(TreeNode root) {
+
+    }
+    TreeNode Deserialize(String str) {
+
+    }
 
 }
