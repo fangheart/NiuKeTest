@@ -47,6 +47,7 @@ Java的PriorityQueue是从JDK1.5开始提供的新的数据结构接口，默认
 
     private int count = 0;
     private PriorityQueue<Integer> minHeap = new PriorityQueue<>();
+    //priority默认是小顶堆所以需要重写comparator翻转他
     private PriorityQueue<Integer> maxHeap = new PriorityQueue<Integer>(15, new Comparator<Integer>() {
         public int compare(Integer o1, Integer o2) {
             return o2 - o1;

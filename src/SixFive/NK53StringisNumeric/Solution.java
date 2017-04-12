@@ -64,22 +64,22 @@ public class Solution {
             if(i>=s.length) return false;
             while((i<s.length)&&(s[i]>='0'&&s[i]<='9'))
                 i++;
-            }
-            if(i<s.length&&(s[i]=='e'||s[i]=='E')){
+        }
+        if(i<s.length&&(s[i]=='e'||s[i]=='E')){
+            i++;
+            if((i<s.length)&&(s[i]=='+'||s[i]=='-')){
                 i++;
-                if((i<s.length)&&(s[i]=='+'||s[i]=='-')){
-                    i++;
-                    if(i<s.length)
-                        while((i<s.length)&&(s[i]>='0'&&s[i]<='9'))
-                            i++;
-                    else
-                        return false;
-                }
-                else if(i<s.length){
-                    while((i<s.length)&&(s[i]>='0'&&s[i]<='9')) i++;
-                }else return false;
+                if(i<s.length)
+                    while((i<s.length)&&(s[i]>='0'&&s[i]<='9'))
+                        i++;
+                else
+                    return false;
+            }
+            else if(i<s.length){
+                while((i<s.length)&&(s[i]>='0'&&s[i]<='9')) i++;
+            }else return false;
         }
         if(i<s.length) return false;
-            return true;
+        return true;
     }
 }
