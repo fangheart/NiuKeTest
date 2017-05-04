@@ -25,6 +25,7 @@ public class Str5StringCombie {
     public static void compareMethod2(String s1, String s2){
         byte[] b1 = s1.getBytes();
         byte[] b2 = s2.getBytes();
+        char c[] = s1.toCharArray();
         int cCout[] = new int[256];//因为字符数一共256个，所以足够了
         for (int i = 0; i < 256; i++) {
             cCout[i] = 0;

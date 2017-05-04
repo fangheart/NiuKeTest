@@ -9,7 +9,7 @@ public class Str7KMPStringHasSubString {
 
     @Test
     public void test(){
-        System.out.println(KMP("goooooodgodddddd","god"));
+        System.out.println(KMP("god","god"));
     }
     public static boolean KMP(String str,String subStr){
         String newStr = "x" + str;
