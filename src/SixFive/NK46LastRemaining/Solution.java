@@ -1,5 +1,7 @@
 package SixFive.NK46LastRemaining;
 
+import org.junit.Test;
+
 import java.util.ArrayList;
 
 /**
@@ -38,7 +40,12 @@ class ListNode {
 
 public class Solution {
     public static void main(String[] args){
-
+        Solution solution = new Solution();
+        System.out.print( solution.LastRemaining_Solution(128,2) );
+    }
+    @Test
+    public void test(){
+        System.out.print( LastRemaining_Solution(127,2) );
     }
     /*
 如果只求最后一个报数胜利者的话，我们可以用数学归纳法解决该问题，为了讨论方便，先把问题稍微改变一下，并不影响原意：

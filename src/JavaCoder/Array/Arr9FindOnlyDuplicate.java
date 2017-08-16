@@ -12,7 +12,8 @@ public class Arr9FindOnlyDuplicate {
 
     //方法一累加求和法因为只有一个数重复累加后减去1~N-1的和就是结果
     public static int findDup1(int[] a){
-        int n = a.length;
+
+ int n = a.length;
         int sum1 = 0;
         int sum2 = 0;
         for (int i = 0; i < n-1; i++) {
@@ -23,5 +24,4 @@ public class Arr9FindOnlyDuplicate {
         int result = sum1 - sum2;
         return result;
     }
-
 }
